@@ -44,7 +44,7 @@ class Pokemmo:
             list_of_windows.append((hwnd, win32gui.GetWindowText(hwnd)))
         win32gui.EnumWindows(emu_windows_callback, None)
 
-        pokemmo_hwnd = [hwnd for hwnd, ttl in list_of_windows if title in ttl.lower().translate(cy_to_lat)]
+        pokemmo_hwnd = [hwnd for hwnd, ttl in list_of_windows if title == ttl.lower().translate(cy_to_lat)]
         if pokemmo_hwnd:
             return pokemmo_hwnd[0]
         return None
