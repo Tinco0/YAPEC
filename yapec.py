@@ -9,6 +9,7 @@ import cv2
 import pytesseract
 import sqlite3
 import numpy as np
+import subprocess
 
 
 class Pokemmo:
@@ -24,7 +25,7 @@ class Pokemmo:
             if user_answer.lower() == 'y':
                 pokemmo_path = Path(__file__).resolve().parents[3]
                 try: 
-                    os.system(os.path.join(str(pokemmo_path), 'PokeMMO.exe'))
+                    subprocess.Popen(os.path.join(str(pokemmo_path), 'PokeMMO.exe'), shell = True)
                 except Exception:
                     raise Exception('PokeMMO.exe was not found.')
                 time.sleep(10)
