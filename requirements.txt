@@ -1,0 +1,5 @@
+numpy==1.21.1
+opencv_python==4.8.0.74
+opencv_python_headless==4.8.0.74
+pytesseract==0.3.10
+pywin32==301
