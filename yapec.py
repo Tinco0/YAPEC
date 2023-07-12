@@ -22,8 +22,11 @@ class Pokemmo:
         if not hwnd:
             user_answer = input('PokeMMO was not found, would you like to launch it? (y/n)')
             if user_answer.lower() == 'y':
-                pokemmo_path = Path(__file__).resolve().parents[2]
-                os.system(os.path.join(str(pokemmo_path), 'PokeMMO.exe'))
+                pokemmo_path = Path(__file__).resolve().parents[3]
+                try: 
+                    os.system(os.path.join(str(pokemmo_path), 'PokeMMO.exe'))
+                except Exception:
+                    raise Exception('PokeMMO.exe was not found.')
                 time.sleep(10)
                 hwnd = cls._find_pokemmo(title)
             if not hwnd:
@@ -241,7 +244,9 @@ class DBHandler:
 if __name__ == '__main__':
     total = []
     i = 0
-    db_file = os.path.join(str(Path(__file__)), 'data', 'encounters.sqlite3')
+    db_path = os.path.join(str(Path(__file__).parent), 'data')
+    Path(db_path).mkdir(parents = True, exist_ok = True)
+    db_file = os.path.join(db_path, 'encounters.sqlite3')
     pokemmo = Pokemmo.from_title()
     DBHandler.setup_db(db_file)
     while True:
