@@ -1,4 +1,4 @@
-# YAPEC (Yet Another Pokemon Encounter Counter)
+# YAPEC (Yet Another PokeMMO Encounter Counter)
 
 **Note: This project is a work in progress and is primarily for learning purposes.**
 
@@ -47,7 +47,7 @@ Contributions to YAPEC are welcome! If you have any ideas, bug reports, or featu
 
 ## Acknowledgements
 
-- This project is inspired by the Pokemon games, the desire to learn more about OCR and image processing techniques and the available community tools for encounter counting.
+- This project is inspired by the Pokemon and PokeMMO games, the desire to learn more about OCR and image processing techniques and the available community tools for encounter counting.
 - The OCR functionality is powered by the [pytesseract](https://github.com/madmaze/pytesseract) library, which utilizes the [Tesseract OCR engine](https://github.com/tesseract-ocr/tesseract).
 - The image processing operations are implemented using the [OpenCV](https://opencv.org/) Python library.
 - The SQLite database interaction is facilitated by the [sqlite3](https://docs.python.org/3/library/sqlite3.html) module in Python's standard library.
