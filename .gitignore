@@ -1,1 +1,6 @@
 data/
+media/
+ignore/
+icons/*.png
+__pycache__/
+.vscode/
