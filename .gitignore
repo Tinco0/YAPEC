@@ -5,3 +5,4 @@ icons/*.png
 __pycache__/
 .vscode/
 config/init.json
+DEBUG/
